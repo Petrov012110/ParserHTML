@@ -9,7 +9,6 @@ html{
 html,
 body {
     height: 100%;
-
 }
 a{
     display: inline-block;
@@ -23,10 +22,11 @@ li{
     list-style: none;
 }
 body{
-    font-family: 'Roboto-Regular', sans-serif;
+    // font-family: 'Roboto-Regular', sans-serif;
     font-size: 15px;
     color: $text;
     line-height: 24px;
     font-weight: 400;
     overflow-x: hidden;
 }
+
