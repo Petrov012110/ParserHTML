@@ -9,11 +9,17 @@ html{
 html,
 body {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 a{
     display: inline-block;
     text-decoration: none;
     color: $text;
+}
+p{
+    font-size: 16px;
+    font-weight: 600;
 }
 ul,
 li{

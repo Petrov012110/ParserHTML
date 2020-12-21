@@ -16,7 +16,9 @@
         <div class="toolbar-section_left">
             <div class="toolbar-logo">
                 <a href="#">
-                    PARSER<span>STATISTICS</span><span>_</span>
+                    PARSER<span>_</span>
+                    <!-- <span>STATISTICS</span> -->
+                    
                 </a>
             </div>
             <div class="menu-button">
@@ -35,14 +37,28 @@
     <div class="container-component">
         <div class="sidebar-component">
             <div class="sidebar-item">
-                <div class="brand">
-                    Supreme
-                </div>
+                    <div class="brand brand-list ">
+                        Lorem
+                    </div>
+                    <div class="brand-product">
+                        <ul>
+                            <li class="brand-product__li">SubLorem</li>
+                            <li class="brand-product__li">SubLorem</li>
+                            <li class="brand-product__li">SubLorem</li>
+                        </ul>
+                    </div>                
             </div>
             <div class="sidebar-item">
-                <div class="brand">
-                    Supreme
+                <div class="brand brand-list">
+                    Lorem
                 </div>
+                <div class="brand-product">
+                    <ul>
+                        <li class="brand-product__li">SubLorem</li>
+                        <li class="brand-product__li">SubLorem</li>
+                        <li class="brand-product__li">SubLorem</li>
+                    </ul>
+                </div> 
             </div>
             <div class="sidebar-item">
                 <div class="brand">
@@ -161,25 +177,56 @@
             </div>
         </div>
         <div class="content-component">
-            <div class="content-box">
-                <div class="content-box__filter">
-                    <ul>
-                        <li><input type="checkbox">themarket</li>
-                        <li><input type="checkbox">themarket</li>
-                        <li><input type="checkbox">themarket</li>
-                        <li><input type="checkbox">themarket</li>
-                        <li><input type="checkbox">themarket</li>
-                        <li><input type="checkbox">themarket</li>
-                        <li><input type="checkbox">themarket</li>
-                    </ul>
-                </div>
-                <div class="content-box__mail">
-                    <input type="email">
-                </div>
-                <div class="content-box__button">
-                    <button>Send</button>
+            <div class="content-component__wrapper">
+                <div class="content-box">
+                    <div class="description">
+                        <p>Выберите группы, в которых вести поиск</p>
+                    </div>
+                    <div class="content-box__filter">
+                        <label  class="container-checkbox">Select All
+                            <input id="selectAll" type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">TheMarket
+                            <input class="che" type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">StremObzorStore
+                            <input class="che" type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">Stock
+                            <input class="che" type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">SnekerHead
+                            <input class="che" type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">AnotheGroup
+                            <input class="che" type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container-checkbox">AnotheGroup
+                            <input class="che" type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                          
+                    </div>
+                    <div class="container-email">
+                        <div class="description">
+                            <p>Укажите почту для получения документа</p>
+                        </div>
+                        <div class="container__item">
+                            <form class="form">
+                                <input type="email" class="form__field" placeholder="Your E-Mail Address" />
+                                <button type="button" class="btn">Send</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
 
