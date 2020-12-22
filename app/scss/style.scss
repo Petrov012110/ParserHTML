@@ -7,7 +7,7 @@
     z-index: 2;
     background-color: #fafafb;
     height: 60px;
-    border-top: 3px solid $secondary;
+    // border-top: 3px solid $secondary;
     display: flex;
     left: 0;
     right: 0;
@@ -33,8 +33,8 @@
     font-size: 36px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
-    color: #fc5454;
-    text-transform: uppercase;
+    color: #f84949;
+    // text-transform: uppercase;
 }
 .toolbar-logo a span{
     opacity: 0.5;
@@ -74,7 +74,7 @@
             transition: all 0.5s;
         }
         &.active{
-            background-color: $grey;
+            background-color: #f4fbfb;
             color: $text;
             &::after{
                 font-family: 'icomoon';
@@ -84,6 +84,9 @@
                 color: $secondary;
                 left: 193px;
                 transition: all 0.5s;
+            }
+            &:hover{
+                background-color: #f4fbfb;
             }
         }
     }
@@ -104,6 +107,7 @@
             transition: all 0.5s;
             color: $text;
         }
+        
 
     }
 
@@ -112,7 +116,7 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         line-height: 20px;
-        padding-left: 30px;
+        padding-left: 20px;
         ul{
             width: 100%;
         }
@@ -122,16 +126,27 @@
             display: flex;
             align-items: center;
             padding-left: 5px;
+            margin-top: 3px;
             cursor: pointer;
             &:hover{
                 background-color: $grey;
                 transition: all 0.5s;
                 color: #000;
             }
-            &.active-li{
-                background-color: $grey;
+            &.active__li{
+                background-color: #f4fbfb;
                 color: $text;
+                &::after{
+                    position: relative;
+                    font-family: 'icomoon';
+                    content: "\f00c";
+                    font-size: 16px;
+                    color: $green;
+                    left: 18px;
+                    
+                }
             }
+
         }
 
     }
@@ -147,7 +162,7 @@
     position: absolute;
 }
 //checkboks
-.container-checkbox {
+.container-checkbox{
     display: block;
     position: relative;
     padding-left: 35px;
@@ -176,7 +191,6 @@
     left: 0;
     height: 21px;
     width: 21px;
-    border-radius: 0.25rem;
     background-color: #eee;
   }
   
@@ -184,12 +198,10 @@
   .container-checkbox:hover input ~ .checkmark {
     background-color: #ccc;
   }
-  
   /* When the checkbox is checked, add a blue background */
   .container-checkbox input:checked ~ .checkmark {
     background-color: $secondary;
   }
-  
   /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
     content: "";
