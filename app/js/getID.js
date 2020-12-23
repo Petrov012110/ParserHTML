@@ -7,12 +7,12 @@ function clickFunction() {
     let elements = document.querySelectorAll('ul>li');
     let newArrId = [];
     
-    // for (let elem of elements) {
-    //     if(elem.className == 'brand-product__li active__li'){
-    //         newArrId.push(elem.id);
-    //     }
-    // }
-    console.log(elements);
+    for (let elem of elements) {
+        if(elem.className == 'brand-product__li active__li'){
+            newArrId.push(elem.id);
+        }
+    }
+    console.log(newArrId);
     return newArrId;
 }
 function clickFunctionCheckbox() {
