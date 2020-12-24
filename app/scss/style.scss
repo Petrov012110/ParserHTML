@@ -19,7 +19,7 @@
     padding: 0 15px;
     box-shadow: 0 1px 0 rgba(12,13,14,0.15);
 }
-.toolbar-section_left{
+.toolbar-section__left{
     display: flex;
     .menu-button{
         display: none;
@@ -29,26 +29,46 @@
     }
 }
 .toolbar-logo a{
-    margin-top: 6px;
-    font-size: 22px;
+    display: flex;
+    align-items: center;
     font-weight: 700;
     color: $text;
-
-    // font-family: 'Geo', sans-serif;
-    // font-family: 'Moderan', serif;
-    // font-family: 'Press Start 2P', cursive;
     letter-spacing: 3px;
-    // text-shadow: 1px 1px 0 #ccc, 2px 2px 0 #ccc, 3px 3px 0 #444, 4px 4px 0 #444, 5px 5px 0 #444, 6px 6px 0 #444, 5px 5px 15px #999;
-    // color: #f84949;
-    // text-transform: uppercase;
+    img{
+        background-position: center center;
+        background-size: cover;
+        width: 60px;
+        height: 60px;
+    }
+    .img_logo{
+        width: 49px;
+        height: 50px;
+    }
+    .logo{
+        font-size: 24px;
+    }
 }
 .toolbar-logo a span{
     opacity: 0.7;
-    font-size: 22px;
     font-weight: 700;
 }
-.toolbar-section_right{
+.toolbar-section__right{
     display: flex;
+    // position: absolute;
+    .link__vk{
+        &::after{
+            font-family: 'icomoon';
+            position: relative;
+            content: "\f189";
+            font-size: 25px;
+            color: $text;
+    
+        }
+        &:hover{
+            color: #fff;
+        }
+    }
+
 }
 //content
 .container-component{
@@ -144,7 +164,7 @@
             }
             &.active__li{
                 background-color: #f4fbfb;
-                color: $text;
+                color: #000;
                 &::after{
                     position: relative;
                     font-family: 'icomoon';
@@ -240,6 +260,12 @@
 }
 //mail 
 .container-email{
+    form{
+        display: block;
+    }
+    .blocked{
+        
+    }
     .btn{
         border: none;
         background-color: #fc5454;
@@ -248,11 +274,13 @@
         border-radius: 0.25rem;
         padding: 8px 9px;
         position: absolute;
+        font-size: 18px;
+        outline: none;
         &::after{
             font-family: 'icomoon';
             position: relative;
             content: "\f003";
-            font-size: 16px;
+            font-size: 18px;
             padding-left: 5px;
         }
     }
@@ -267,6 +295,20 @@
     input[type=email]:focus {
         border: 1px #2ca2fd solid
       }
+    #result{
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .changed{
+        &::before{
+            padding-right: 10px;
+            font-family: 'icomoon';
+            position: relative;
+            content: "\f06a";
+            font-size: 21px;
+        }
+    }
 }
 
 .container-email{

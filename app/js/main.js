@@ -30,11 +30,13 @@ $(function(){
         $result.text("");
       
         if (validateEmail(email)) {
-          $result.text(email + " is valid :)");
+          $result.text(email + " is valid");
           $result.css("color", "#42c28c");
+          $("#result").addClass('changed');
         } else {
-          $result.text(email + " is not valid :(");
-          $result.css("color", "#fc5454");
+          $result.text(email + " is not valid");
+          $result.css({"color": "#fc5454"});
+          $("#result").addClass('changed');
         }
         return false;
       }
