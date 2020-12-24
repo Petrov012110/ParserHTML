@@ -1,7 +1,10 @@
+
+
 document.querySelector('.btn').onclick = addDataFrom;
 function addDataFrom(){
     clickFunction();
     clickFunctionCheckbox();
+    getEmail();
 }
 function clickFunction() {
     let elements = document.querySelectorAll('ul>li');
@@ -24,4 +27,10 @@ function clickFunctionCheckbox() {
     }
     console.log(newArr);
     return newArr;
+}
+function getEmail() {
+    let newArrEmail = [];
+    newArrEmail.push(document.getElementById('email').value);
+    console.log(newArrEmail);
+    return newArrEmail;
 }

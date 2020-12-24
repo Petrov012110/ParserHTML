@@ -32,12 +32,14 @@
     margin-top: 6px;
     font-size: 22px;
     font-weight: 700;
+    color: $text;
+
     // font-family: 'Geo', sans-serif;
     // font-family: 'Moderan', serif;
-    font-family: 'Press Start 2P', cursive;
+    // font-family: 'Press Start 2P', cursive;
     letter-spacing: 3px;
-    text-shadow: 1px 1px 0 #ccc, 2px 2px 0 #ccc, 3px 3px 0 #444, 4px 4px 0 #444, 5px 5px 0 #444, 6px 6px 0 #444, 5px 5px 15px #999;
-    color: #f84949;
+    // text-shadow: 1px 1px 0 #ccc, 2px 2px 0 #ccc, 3px 3px 0 #444, 4px 4px 0 #444, 5px 5px 0 #444, 6px 6px 0 #444, 5px 5px 15px #999;
+    // color: #f84949;
     // text-transform: uppercase;
 }
 .toolbar-logo a span{
