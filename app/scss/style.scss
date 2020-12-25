@@ -21,9 +21,7 @@
 }
 .toolbar-section__left{
     display: flex;
-    .menu-button{
-        display: none;
-    }
+
     .home-buton{
         display: none;
     }
@@ -73,6 +71,19 @@
 //content
 .container-component{
     display: flex;
+    .menu-button{
+        display: none;
+        position: relative;
+        .menu-button__strip{
+            width: 20px;
+            height: 4px;
+            background-color: aqua;
+            padding-top: 3px;
+            &:first-child{
+                padding-top: 0;
+            }
+        }
+    }
 }
 .sidebar-component{
     max-width: 320px;
@@ -183,13 +194,19 @@
 }
 
 .content-box{
-    position: relative;
-    top: 100px;
-    left: 200px;
+    // position: relative;
+    // top: 100px;
+    // left: 200px;
 }
-.content-component__wrapper{
-    position: absolute;
+.content-component{
+    max-width: 700px;
+    width: 100%;
+    padding-left: 100px;
+    padding-top: 20px;
 }
+// .content-component__wrapper{
+//     position: absolute;
+// }
 //checkboks
 .container-checkbox{
     display: block;
