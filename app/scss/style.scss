@@ -21,9 +21,19 @@
 }
 .toolbar-section__left{
     display: flex;
-
+    align-items: center;
     .home-buton{
         display: none;
+    }
+}
+.menu-button{
+    display: none;
+    .menu-button__strip{
+        background-color: aqua;
+        padding-top: 3px;
+        &:first-child{
+            padding-top: 0;
+        }
     }
 }
 .toolbar-logo a{
@@ -71,19 +81,7 @@
 //content
 .container-component{
     display: flex;
-    .menu-button{
-        display: none;
-        position: relative;
-        .menu-button__strip{
-            width: 20px;
-            height: 4px;
-            background-color: aqua;
-            padding-top: 3px;
-            &:first-child{
-                padding-top: 0;
-            }
-        }
-    }
+
 }
 .sidebar-component{
     max-width: 320px;
@@ -95,6 +93,10 @@
     height: 100vh;
     overflow-y: auto;
     top: 0;
+    z-index: 5;
+    &.active{
+        display: block;
+    }
 }
 .sidebar-item{
     margin-top: 5px;

@@ -7,6 +7,9 @@ $(function(){
     $('.brand-product__li').on('click', function(){
         $(this).toggleClass('active__li');
     });
+    $('.menu-button').on('click', function(){
+        $('.sidebar-component').toggleClass('active');
+    });
 
     $("#selectAll").on('click', function() {
         $(".che").prop("checked", $(this).prop("checked"));
