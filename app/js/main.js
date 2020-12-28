@@ -18,29 +18,31 @@ $(function(){
         }
       });
 
-
       function validateEmail(email) {
         const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
       }
       
       function validate() {
-        const $result = $("#result");
         const email = $("#email").val();
+        const $result = $("#result");
+        const $btn = $("#validate")
         $result.text("");
       
         if (validateEmail(email)) {
           $result.text(email + " is valid");
           $result.css("color", "#42c28c");
           $("#result").addClass('changed');
+          $btn.removeAttr('disabled');
         } else {
           $result.text(email + " is not valid");
           $result.css({"color": "#fc5454"});
           $("#result").addClass('changed');
+          $btn.prop('disabled', 'true');
         }
         return false;
-      }
+      }      
       
-      $("#validate").on("click", validate);
+      $("#email").on("input", validate);
 });
 

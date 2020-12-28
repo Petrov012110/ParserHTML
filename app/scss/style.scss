@@ -193,6 +193,8 @@
 
 }
 
+
+
 .content-box{
     // position: relative;
     // top: 100px;
@@ -277,12 +279,11 @@
 }
 //mail 
 .container-email{
+
     form{
         display: block;
     }
-    .blocked{
-        
-    }
+
     .btn{
         border: none;
         background-color: #fc5454;
@@ -300,7 +301,14 @@
             font-size: 18px;
             padding-left: 5px;
         }
+        &[disabled] {
+            background-color: #d1cfcf;
+            cursor:not-allowed
+        }
     }
+    // .button[disabled] .btn{
+        
+    // }
     .form__field{
         padding: 8px 9px;
         outline: none;
