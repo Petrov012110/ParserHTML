@@ -1,3 +1,1 @@
-export const validation = () => {
-
-}
+import {getAllParametrs} from './getAllParametrs'

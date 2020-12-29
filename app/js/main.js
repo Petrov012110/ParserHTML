@@ -29,7 +29,7 @@ $(function(){
       function validate() {
         const email = $("#email").val();
         const $result = $("#result");
-        const $btn = $("#validate")
+        const $btn = $("#validate");
         $result.text("");
       
         if (validateEmail(email)) {
@@ -48,4 +48,7 @@ $(function(){
       
       $("#email").on("input", validate);
 });
+
+
+
 
