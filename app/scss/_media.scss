@@ -61,6 +61,9 @@
     .sidebar-component {
         max-width: 230px;
     }
+    .container-email {
+        margin-top: 44px;
+    }
 }
 @media (max-width: 660px) {
     .content-box__filter {
@@ -82,8 +85,31 @@
     .sidebar-item .brand-list.active::after {
         left: -4px;
     }
+    .container-checkbox {
+        padding-left: 27px;
+    }
+    .container-email {
+        margin-top: 44px;
+    }
 }
 @media (max-width: 440px) {
+    .toolbar-component {
+        height: 48px;
+    }
+    .toolbar-logo a .logo {
+        font-size: 20px;
+    }
+    .toolbar-logo a .img_logo {
+        width: 45px;
+        height: 41px;
+    }
+    .content-component {
+        padding-top: 1px;
+        padding-bottom: 20px;
+        .container-email {
+            margin-top: 35px;
+        }
+    }
     p {
         font-size: 14px;
     }
@@ -98,5 +124,36 @@
         font-size: 14px;
         line-height: 18px;
         padding-left: 10px;
+    }
+    .container-email{
+        #result{
+            font-size: 14px;
+        }
+        #resultKeyWords,
+        #resultCheckBox{
+            font-size: 14px;
+            &::before{
+                font-size: 14px;
+            }
+        }
+        .changed{
+            &::before{
+                font-size: 14px;
+            }
+        }
+    }
+    .sidebar-item .brand-product ul li.active__li::after {
+        left: 4px;
+    }
+    .checkmark {
+        height: 17px;
+        width: 17px;
+    }
+    .container-checkbox {
+        padding-left: 27px;
+    }
+    .container-checkbox .checkmark:after {
+        left: 6px;
+        top: 3px;
     }
 }

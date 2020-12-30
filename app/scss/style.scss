@@ -62,7 +62,6 @@
 }
 .toolbar-section__right{
     display: flex;
-    // position: absolute;
     .link__vk{
         &::after{
             font-family: 'icomoon';
@@ -70,18 +69,15 @@
             content: "\f189";
             font-size: 25px;
             color: $text;
-    
         }
         &:hover{
             color: #fff;
         }
     }
-
 }
 //content
 .container-component{
     display: flex;
-
 }
 .sidebar-component{
     max-width: 320px;
@@ -130,7 +126,6 @@
             }
         }
     }
-
     .brand{
         padding-left: 5px;
         height: 42px;
@@ -147,13 +142,11 @@
             transition: all 0.5s;
             color: $text;
         }
-
     }
     .brand__title{
         max-width: 150px;
         width: 100%;
     }
-
     .brand-product{
         display: none;
         font-family: 'Montserrat', sans-serif;
@@ -189,30 +182,14 @@
                     
                 }
             }
-
         }
-
     }
-
-}
-
-
-
-.content-box{
-    // position: relative;
-    // top: 100px;
-    // left: 200px;
 }
 .content-component{
-    max-width: 700px;
     width: 100%;
     padding-left: 100px;
-    padding-top: 20px;
+    padding-top: 25px;
 }
-// .content-component__wrapper{
-//     position: absolute;
-// }
-//checkboks
 .container-checkbox{
     display: block;
     position: relative;
@@ -243,6 +220,7 @@
     height: 21px;
     width: 21px;
     background-color: #eee;
+    border-radius: 0.25rem;
   }
   
   /* On mouse-over, add a grey background color */
@@ -278,15 +256,13 @@
     transform: rotate(45deg);
   }
 .content-box__filter{
-    column-count: 3;
+    column-count: 4;
 }
 //mail 
 .container-email{
-
     form{
         display: block;
     }
-
     .btn{
         border: none;
         background-color: #fc5454;
@@ -297,6 +273,7 @@
         position: absolute;
         font-size: 18px;
         outline: none;
+        margin-bottom: 20px;
         &::after{
             font-family: 'icomoon';
             position: relative;
@@ -309,13 +286,9 @@
             cursor:not-allowed
         }
     }
-    // .button[disabled] .btn{
-        
-    // }
     .form__field{
         padding: 8px 9px;
         outline: none;
-        // border-radius: 0.25rem;
         border-radius: 4px;
         border: 1px #a0ccee solid;
         margin-right: 20px;
@@ -328,6 +301,24 @@
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    #resultKeyWords,
+    #resultCheckBox{
+        color: #fc5454;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: none;
+        &.active{
+            display: block;
+        }
+        &::before{
+            padding-right: 10px;
+            font-family: 'icomoon';
+            position: relative;
+            content: "\f06a";
+            font-size: 21px;
+        }
+    }
     .changed{
         &::before{
             padding-right: 10px;
@@ -338,15 +329,12 @@
         }
     }
 }
-
 .container-email{
     margin-top: 60px;
 }
 .description{
     margin-bottom: 20px;
 }
-
-
 
 @import 'media'; 
 

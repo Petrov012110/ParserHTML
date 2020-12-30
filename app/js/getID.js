@@ -2,46 +2,45 @@
 
 document.querySelector('.btn').onclick = addDataFrom;
 
-export function addDataFrom(){
+function addDataFrom(){
     let arrFrontData = [];
-
-    const checkKeyWords = () => {
-        let dataKeyWords = clickFunction();
-        if (dataKeyWords.length) {
-            arrFrontData.push({"Ключевые слова": dataKeyWords});
-            document.querySelector('#resultKeyWords').classList.remove('active');
-        }
-        else{
-            document.querySelector('#resultKeyWords').classList.add('active');
-            return null
-        }
-    }
-    const checkCheckBox = () => {
-        let dataCheckBox = clickFunctionCheckbox();;
-        if (dataCheckBox.length !== 0){
-            arrFrontData.push({"Группы": dataCheckBox});
-            document.querySelector('#resultCheckBox').classList.remove('active');
-        }
-        else{
-            document.querySelector('#resultCheckBox').classList.add('active');
-            return null
-        }
-    }
-    const checkEmail = () => {
-        let dataEmail = getEmail();
-        if (dataEmail.length !== 0){
-            arrFrontData.push({"email": dataEmail});
-        }
-        else{
-            return null
-        }
-    }
-    checkCheckBox();
-    checkKeyWords();
-    checkEmail();
+    checkCheckBox(arrFrontData);
+    checkKeyWords(arrFrontData);
+    checkEmail(arrFrontData);
     console.log(JSON.stringify(arrFrontData));
 }
-
+// import пока что не работает - поэтому все функции в одном файле 
+const checkKeyWords = (arr) => {
+    let dataKeyWords = clickFunction();
+    if (dataKeyWords.length) {
+        arr.push({"Ключевые слова": dataKeyWords});
+        document.querySelector('#resultKeyWords').classList.remove('active');
+    }
+    else{
+        document.querySelector('#resultKeyWords').classList.add('active');
+        return null
+    }
+}
+const checkCheckBox = (arr) => {
+    let dataCheckBox = clickFunctionCheckbox();;
+    if (dataCheckBox.length !== 0){
+        arr.push({"Группы": dataCheckBox});
+        document.querySelector('#resultCheckBox').classList.remove('active');
+    }
+    else{
+        document.querySelector('#resultCheckBox').classList.add('active');
+        return null
+    }
+}
+const checkEmail = (arr) => {
+    let dataEmail = getEmail();
+    if (dataEmail.length !== 0){
+        arr.push({"email": dataEmail});
+    }
+    else{
+        return null
+    }
+}
 
 
 function clickFunction() {
