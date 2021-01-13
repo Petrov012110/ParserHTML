@@ -102,6 +102,16 @@
 
 
 @media (max-width: 440px) {
+    .sidebar-item .brand-list::after {
+        font-size: 13px;
+    }
+    .sidebar-item .brand-list.active::after {
+        font-size: 13px;
+    }
+    .sidebar-component {
+        max-width: 105px;
+        min-width: 105px; 
+    }
     .toolbar-component {
         height: 48px;
     }
@@ -130,9 +140,9 @@
         font-size: 14px;
     }
     .sidebar-item .brand-product {
-        font-size: 14px;
-        line-height: 18px;
-        padding-left: 10px;
+        font-size: 13px;
+        line-height: 16px;
+        padding-left: 7px;
     }
     .container-email{
         #result{
@@ -151,7 +161,14 @@
             }
         }
     }
+    // .sidebar-item .brand-product ul li.active__li{
+    //     font-weight: 600;
+    // }
+    // .sidebar-item .brand-product ul li.active__li::after {
+    //     display: none;
+    // }
     .sidebar-item .brand-product ul li.active__li::after {
+        font-size: 12px;
         left: 4px;
     }
     .checkmark {
@@ -176,4 +193,115 @@
         font-size: 16px;
     }
 
+}
+@media (max-width: 365px){
+    .sidebar-component {
+        padding-left: 1px;
+    }
+    .sidebar-item .brand-product ul li.active__li{
+        font-weight: 600;
+    }
+    .sidebar-item .brand-product ul li.active__li::after {
+        left: 2px;
+        font-size: 12px;
+        display: none;
+    }
+    .btn__wrapper .menu-button .menu-button__strip {
+        width: 23px;
+        height: 3px;
+    }
+}
+@media (max-width: 340px){
+    .sidebar-item .brand-product {
+        font-size: 12px;
+        line-height: 16px;
+        padding-left: 5px;
+    }
+    .sidebar-item .brand-list::after {
+        font-size: 13px;
+    }
+    .sidebar-item .brand-list.active::after {
+        font-size: 13px;
+    }
+    .sidebar-component {
+        max-width: 105px;
+        min-width: 105px; 
+    }
+    .toolbar-component {
+        height: 48px;
+    }
+    .toolbar-logo a .logo {
+        font-size: 20px;
+    }
+    .toolbar-logo a .img_logo {
+        width: 45px;
+        height: 41px;
+    }
+    .content-component {
+        padding-top: 1px;
+        padding-bottom: 20px;
+        .container-email {
+            margin-top: 35px;
+        }
+    }
+    p {
+        font-size: 14px;
+        width: 200px;
+    }
+    .container-checkbox {
+        font-size: 14px;
+    }
+    .sidebar-item .brand {
+        padding-left: 3px;
+        font-size: 13px;
+    }
+    .container-email{
+        #result{
+            font-size: 14px;
+        }
+        #resultKeyWords,
+        #resultCheckBox{
+            font-size: 14px;
+            &::before{
+                font-size: 14px;
+            }
+        }
+        .changed{
+            &::before{
+                font-size: 14px;
+            }
+        }
+    }
+    .sidebar-item .brand-product ul li.active__li{
+        font-weight: 600;
+    }
+    .sidebar-item .brand-product ul li.active__li::after {
+        left: 2px;
+        font-size: 12px;
+        display: none;
+    }
+    .checkmark {
+        height: 17px;
+        width: 17px;
+    }
+    .container-checkbox {
+        padding-left: 27px;
+    }
+    .container-checkbox .checkmark:after {
+        left: 6px;
+        top: 3px;
+    }
+    #loader.active {
+        border: 4px solid  $neon; /* Light grey */
+        border-top: 4px solid $yellow; /* Blue */
+        width: 33px;
+        height: 33px;
+    }
+    .container-email .btn {
+        padding: 6px 6px;
+        font-size: 16px;
+    }
+    .container-email .form__field {
+        width: 193px;
+    }
 }
