@@ -21,6 +21,21 @@ $(function(){
         }
       });
 
+      $("#validate").on('click', function () {
+        let $this = $(this);
+        let $loader = $('#loader');
+        $loader.addClass('active');
+        $this.html('Wait..');
+        $this.attr('disabled', true);
+        setTimeout(function() { 
+            $this.attr('disabled', false);
+            $this.html('Send');
+            $loader.removeClass('active');
+        }, 25000);
+    });
+
+    
+
       function validateEmail(email) {
         const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);

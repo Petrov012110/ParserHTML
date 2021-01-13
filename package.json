@@ -1,4 +1,5 @@
 {
+  
   "name": "start-gulp",
   "version": "1.0.0",
   "description": "",
@@ -27,5 +28,8 @@
     "normalize.css": "^8.0.1",
     "rateyo": "^2.3.5",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
   }
 }

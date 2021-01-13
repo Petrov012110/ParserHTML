@@ -179,7 +179,6 @@
                     font-size: 16px;
                     color: $green;
                     left: 18px;
-                    
                 }
             }
         }
@@ -335,6 +334,23 @@
 .description{
     margin-bottom: 20px;
 }
+
+//loader
+#loader.active {
+    border: 6px solid  $neon; /* Light grey */
+    border-top: 6px solid $yellow; /* Blue */
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+    position: relative;
+    left: 100px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 @import 'media'; 
 
