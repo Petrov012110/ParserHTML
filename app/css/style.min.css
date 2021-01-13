@@ -1,0 +1,915 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #434854;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-size: 15px;
+  color: #434854;
+  line-height: 24px;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'BlenderPro-Bold', sans-serif;
+  src: url("../fonts/BlenderPro-Bold.woff2") format("woff2"), url("../fonts/BlenderPro-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderan';
+  src: url("../fonts/Moderan.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?6ci12y");
+  src: url("../fonts/icomoon.eot?6ci12y#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?6ci12y") format("truetype"), url("../fonts/icomoon.woff?6ci12y") format("woff"), url("../fonts/icomoon.svg?6ci12y#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-broadcast:before {
+  content: "\e900";
+}
+
+.icon-stats-bars:before {
+  content: "\e99c";
+}
+
+.icon-upload2:before {
+  content: "\e9c6";
+}
+
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+.icon-envelope-o:before {
+  content: "\f003";
+}
+
+.icon-check:before {
+  content: "\f00c";
+}
+
+.icon-close:before {
+  content: "\f00d";
+}
+
+.icon-remove:before {
+  content: "\f00d";
+}
+
+.icon-times:before {
+  content: "\f00d";
+}
+
+.icon-cog:before {
+  content: "\f013";
+}
+
+.icon-gear:before {
+  content: "\f013";
+}
+
+.icon-trash-o:before {
+  content: "\f014";
+}
+
+.icon-home:before {
+  content: "\f015";
+}
+
+.icon-check-square-o:before {
+  content: "\f046";
+}
+
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+.icon-exclamation-circle:before {
+  content: "\f06a";
+}
+
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+.icon-thumbs-o-up:before {
+  content: "\f087";
+}
+
+.icon-thumbs-o-down:before {
+  content: "\f088";
+}
+
+.icon-upload:before {
+  content: "\f093";
+}
+
+.icon-credit-card:before {
+  content: "\f09d";
+}
+
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+
+.icon-caret-right:before {
+  content: "\f0da";
+}
+
+.icon-envelope:before {
+  content: "\f0e0";
+}
+
+.icon-angle-left:before {
+  content: "\f104";
+}
+
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+.icon-angle-up:before {
+  content: "\f106";
+}
+
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+.icon-mail-reply:before {
+  content: "\f112";
+}
+
+.icon-reply:before {
+  content: "\f112";
+}
+
+.icon-terminal:before {
+  content: "\f120";
+}
+
+.icon-location-arrow:before {
+  content: "\f124";
+}
+
+.icon-unlock-alt:before {
+  content: "\f13e";
+}
+
+.icon-dollar:before {
+  content: "\f155";
+}
+
+.icon-usd:before {
+  content: "\f155";
+}
+
+.icon-rouble:before {
+  content: "\f158";
+}
+
+.icon-rub:before {
+  content: "\f158";
+}
+
+.icon-ruble:before {
+  content: "\f158";
+}
+
+.icon-stack-overflow:before {
+  content: "\f16c";
+}
+
+.icon-vk:before {
+  content: "\f189";
+}
+
+.icon-file-pdf-o:before {
+  content: "\f1c1";
+}
+
+.icon-file-word-o:before {
+  content: "\f1c2";
+}
+
+.icon-file-excel-o:before {
+  content: "\f1c3";
+}
+
+.icon-file-powerpoint-o:before {
+  content: "\f1c4";
+}
+
+.icon-paper-plane:before {
+  content: "\f1d8";
+}
+
+.icon-send:before {
+  content: "\f1d8";
+}
+
+.icon-paypal:before {
+  content: "\f1ed";
+}
+
+.icon-user-circle-o:before {
+  content: "\f2be";
+}
+
+.toolbar-component {
+  width: 100%;
+  z-index: 2;
+  background-color: #fafafb;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  z-index: 100;
+  padding: 0 15px;
+  -webkit-box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
+          box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
+}
+
+.toolbar-section__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toolbar-section__left .home-buton {
+  display: none;
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-button .menu-button__strip {
+  background-color: aqua;
+  padding-top: 3px;
+}
+
+.menu-button .menu-button__strip:first-child {
+  padding-top: 0;
+}
+
+.toolbar-logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  color: #434854;
+  letter-spacing: 3px;
+}
+
+.toolbar-logo a img {
+  background-position: center center;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+}
+
+.toolbar-logo a .img_logo {
+  width: 49px;
+  height: 50px;
+}
+
+.toolbar-logo a .logo {
+  font-size: 24px;
+}
+
+.toolbar-logo a span {
+  opacity: 0.7;
+  font-weight: 700;
+}
+
+.toolbar-section__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.toolbar-section__right .link__vk::after {
+  font-family: 'icomoon';
+  position: relative;
+  content: "\f189";
+  font-size: 25px;
+  color: #434854;
+}
+
+.toolbar-section__right .link__vk:hover {
+  color: #fff;
+}
+
+.container-component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar-component {
+  max-width: 320px;
+  padding-left: 5px;
+  width: 100%;
+  margin-top: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  z-index: 5;
+}
+
+.sidebar-component.active {
+  display: block;
+}
+
+.sidebar-item {
+  margin-top: 5px;
+  max-width: 280px;
+  width: 100%;
+}
+
+.sidebar-item .brand-list::after {
+  font-family: 'icomoon';
+  content: "\f054";
+  position: relative;
+  font-size: 16px;
+  color: #2ca2fd;
+  left: 95px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.sidebar-item .brand-list.active {
+  background-color: #f4fbfb;
+  color: #434854;
+}
+
+.sidebar-item .brand-list.active::after {
+  font-family: 'icomoon';
+  content: "\f078";
+  position: relative;
+  font-size: 16px;
+  color: #2ca2fd;
+  left: 95px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.sidebar-item .brand-list.active:hover {
+  background-color: #f4fbfb;
+}
+
+.sidebar-item .brand {
+  padding-left: 5px;
+  height: 42px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .25rem;
+}
+
+.sidebar-item .brand:hover {
+  background-color: #f2f2f2;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #434854;
+}
+
+.sidebar-item .brand__title {
+  max-width: 150px;
+  width: 100%;
+}
+
+.sidebar-item .brand-product {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.sidebar-item .brand-product ul {
+  width: 100%;
+}
+
+.sidebar-item .brand-product ul li {
+  border-radius: .25rem;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.sidebar-item .brand-product ul li:hover {
+  background-color: #f2f2f2;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #000;
+}
+
+.sidebar-item .brand-product ul li.active__li {
+  background-color: #f4fbfb;
+  color: #000;
+}
+
+.sidebar-item .brand-product ul li.active__li::after {
+  position: relative;
+  font-family: 'icomoon';
+  content: "\f00c";
+  font-size: 16px;
+  color: #42c28c;
+  left: 18px;
+}
+
+.content-component {
+  width: 100%;
+  padding-left: 100px;
+  padding-top: 25px;
+}
+
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: #eee;
+  border-radius: 0.25rem;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+  background-color: #2ca2fd;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.content-box__filter {
+  -webkit-column-count: 4;
+     -moz-column-count: 4;
+          column-count: 4;
+}
+
+.container-email form {
+  display: block;
+}
+
+.container-email .btn {
+  border: none;
+  background-color: #fc5454;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 8px 9px;
+  position: absolute;
+  font-size: 18px;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.container-email .btn::after {
+  font-family: 'icomoon';
+  position: relative;
+  content: "\f003";
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.container-email .btn[disabled] {
+  background-color: #d1cfcf;
+  cursor: not-allowed;
+}
+
+.container-email .form__field {
+  padding: 8px 9px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px #a0ccee solid;
+  margin-right: 20px;
+}
+
+.container-email input[type=email]:focus {
+  border: 1px #2ca2fd solid;
+}
+
+.container-email #result {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.container-email #resultKeyWords,
+.container-email #resultCheckBox {
+  color: #fc5454;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.container-email #resultKeyWords.active,
+.container-email #resultCheckBox.active {
+  display: block;
+}
+
+.container-email #resultKeyWords::before,
+.container-email #resultCheckBox::before {
+  padding-right: 10px;
+  font-family: 'icomoon';
+  position: relative;
+  content: "\f06a";
+  font-size: 21px;
+}
+
+.container-email .changed::before {
+  padding-right: 10px;
+  font-family: 'icomoon';
+  position: relative;
+  content: "\f06a";
+  font-size: 21px;
+}
+
+.container-email {
+  margin-top: 60px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+#loader.active {
+  border: 6px solid #00f0ff;
+  /* Light grey */
+  border-top: 6px solid #ffe700;
+  /* Blue */
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+  position: relative;
+  left: 100px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1150px) {
+  .content-box__filter {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+  .content-box {
+    top: 53px;
+    left: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .content-box {
+    top: 16px;
+    left: 36px;
+  }
+  .content-component {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 740px) {
+  .btn__wrapper {
+    position: relative;
+  }
+  .btn__wrapper .menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  .btn__wrapper .menu-button:hover {
+    cursor: pointer;
+  }
+  .btn__wrapper .menu-button .menu-button__strip {
+    width: 27px;
+    height: 4px;
+    background-color: aqua;
+    margin-top: 5px;
+  }
+  .btn__wrapper .menu-button .menu-button__strip:first-child {
+    margin-top: 0px;
+  }
+  .content-component {
+    padding-left: 10px;
+  }
+  .content-box {
+    top: 16px;
+    left: 182px;
+  }
+  .sidebar-component {
+    display: none;
+  }
+  .content-component__wrapper {
+    padding-left: 45px;
+  }
+  .sidebar-item .brand-list::after {
+    left: 35px;
+  }
+  .sidebar-item .brand-list.active::after {
+    left: 35px;
+  }
+  .sidebar-item {
+    max-width: 214px;
+  }
+  .sidebar-component {
+    max-width: 230px;
+  }
+  .container-email {
+    margin-top: 44px;
+  }
+}
+
+@media (max-width: 660px) {
+  .content-box__filter {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
+  .content-component__wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .sidebar-item {
+    max-width: 150px;
+  }
+  .sidebar-component {
+    max-width: 170px;
+  }
+  .sidebar-item .brand-list::after {
+    left: -4px;
+  }
+  .sidebar-item .brand-list.active::after {
+    left: -4px;
+  }
+  .container-checkbox {
+    padding-left: 27px;
+  }
+  .container-email {
+    margin-top: 44px;
+  }
+}
+
+@media (max-width: 440px) {
+  .toolbar-component {
+    height: 48px;
+  }
+  .toolbar-logo a .logo {
+    font-size: 20px;
+  }
+  .toolbar-logo a .img_logo {
+    width: 45px;
+    height: 41px;
+  }
+  .content-component {
+    padding-top: 1px;
+    padding-bottom: 20px;
+  }
+  .content-component .container-email {
+    margin-top: 35px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .container-checkbox {
+    font-size: 14px;
+  }
+  .sidebar-item .brand {
+    padding-left: 7px;
+    font-size: 14px;
+  }
+  .sidebar-item .brand-product {
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 10px;
+  }
+  .container-email #result {
+    font-size: 14px;
+  }
+  .container-email #resultKeyWords,
+  .container-email #resultCheckBox {
+    font-size: 14px;
+  }
+  .container-email #resultKeyWords::before,
+  .container-email #resultCheckBox::before {
+    font-size: 14px;
+  }
+  .container-email .changed::before {
+    font-size: 14px;
+  }
+  .sidebar-item .brand-product ul li.active__li::after {
+    left: 4px;
+  }
+  .checkmark {
+    height: 17px;
+    width: 17px;
+  }
+  .container-checkbox {
+    padding-left: 27px;
+  }
+  .container-checkbox .checkmark:after {
+    left: 6px;
+    top: 3px;
+  }
+  #loader.active {
+    border: 4px solid #00f0ff;
+    /* Light grey */
+    border-top: 4px solid #ffe700;
+    /* Blue */
+    width: 33px;
+    height: 33px;
+  }
+  .container-email .btn {
+    padding: 6px 6px;
+    font-size: 16px;
+  }
+}
