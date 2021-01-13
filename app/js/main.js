@@ -21,18 +21,18 @@ $(function(){
         }
       });
 
-      $("#validate").on('click', function () {
-        let $this = $(this);
-        let $loader = $('#loader');
-        $loader.addClass('active');
-        $this.html('Wait..');
-        $this.attr('disabled', true);
-        setTimeout(function() { 
-            $this.attr('disabled', false);
-            $this.html('Send');
-            $loader.removeClass('active');
-        }, 25000);
-    });
+    //   $("#validate").on('click', function () {
+    //     let $this = $(this);
+    //     let $loader = $('#loader');
+    //     // $loader.addClass('active');
+    //     $this.html('Wait..');
+    //     // $this.attr('disabled', true);
+    //     setTimeout(function() { 
+    //         $this.attr('disabled', false);
+    //         $this.html('Send');
+    //         $loader.removeClass('active');
+    //     }, 25000);
+    // });
 
     
 

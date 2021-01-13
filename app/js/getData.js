@@ -6,16 +6,29 @@
     let {sendData} = await import("./sendData.js");
     
     document.querySelector('.btn').onclick = addDataFrom;
-
     
-
     function addDataFrom(){
         let arrFrontData = [];
-        checkCheckBox(arrFrontData);
-        checkKeyWords(arrFrontData);
-        checkEmail(arrFrontData);
-        console.log(JSON.stringify(arrFrontData));
-        sendData(arrFrontData);
+        if(
+            checkCheckBox(arrFrontData) !== null && 
+            checkKeyWords(arrFrontData) !== null && 
+            checkEmail(arrFrontData) !== null
+            )
+            {
+                console.log(JSON.stringify(arrFrontData));
+
+                sendData(arrFrontData);
+                
+                document.querySelector('.btn').innerHTML = 'Wait..';
+                document.querySelector('.loader').classList.toggle('active');
+                document.querySelector('.btn').setAttribute('disabled', 'true');
+
+                setTimeout(() => {
+                    document.querySelector('.btn').innerHTML = 'Send';
+                    document.querySelector('.loader').classList.toggle('active');
+                    document.querySelector('.btn').removeAttribute('disabled');
+                }, 25000);
+            }
     }
 
     
