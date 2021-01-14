@@ -42,6 +42,8 @@
     }
     .content-component {
         padding-left: 10px;
+        padding-bottom: 90px;
+        margin-bottom: 42px;
     }
     .content-box {
         top: 16px;
@@ -195,6 +197,12 @@
 
 }
 @media (max-width: 365px){
+    input[type="email"]::placeholder{
+        font-size: 14px;
+    }
+    input[type="email"]{
+        font-size: 12px;
+    }
     .sidebar-component {
         padding-left: 1px;
     }
@@ -210,8 +218,17 @@
         width: 23px;
         height: 3px;
     }
+    .container-email .form__field {
+        max-width: 170px;
+    }
 }
 @media (max-width: 340px){
+    input[type="email"]::placeholder{
+        font-size: 14px;
+    }
+    input[type="email"]{
+        font-size: 12px;
+    }
     .sidebar-item .brand-product {
         font-size: 12px;
         line-height: 16px;
@@ -302,6 +319,6 @@
         font-size: 16px;
     }
     .container-email .form__field {
-        width: 193px;
+        max-width: 170px;
     }
 }
