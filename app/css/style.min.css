@@ -547,6 +547,9 @@ body {
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -608,10 +611,31 @@ body {
   transform: rotate(45deg);
 }
 
+.icon-group {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
 .content-box__filter {
   -webkit-column-count: 4;
      -moz-column-count: 4;
           column-count: 4;
+}
+
+.wrapper-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper-label .group-link {
+  padding-bottom: 2px;
+  margin-left: 10px;
+  line-height: 0;
 }
 
 .container-email form {
