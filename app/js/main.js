@@ -8,8 +8,17 @@ $(function(){
         $(this).toggleClass('active__li');
     });
     $('.menu-button').on('click', function(){
-        $('.sidebar-component').toggleClass('active');
+        // $('.sidebar-component').toggleClass('active');
+        // e.preventDefault();
+        $(".sidebar-component").toggleClass("active");
+        if ($(".sidebar-component").hasClass('active')) {
+          $('<div class="overlay">&nbsp;</div>').prependTo($('.container-component'));
+      } else {
+          $('.overlay').remove();
+      }
     });
+
+
 
     $("#selectAll").on('click', function() {
         $(".che").prop("checked", $(this).prop("checked"));

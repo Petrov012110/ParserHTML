@@ -307,6 +307,7 @@ body {
   padding: 0 15px;
   -webkit-box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
           box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
+  position: fixed;
 }
 
 .toolbar-section__left {
@@ -392,6 +393,14 @@ body {
   display: flex;
 }
 
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 105vh;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+
 .sidebar-component {
   max-width: 320px;
   padding-left: 5px;
@@ -410,11 +419,15 @@ body {
   height: 100vh;
   overflow-y: auto;
   top: 0;
+  opacity: 1;
   z-index: 5;
 }
 
 .sidebar-component.active {
   display: block;
+  position: fixed;
+  top: 47px;
+  background-color: #fff;
 }
 
 .sidebar-item {
@@ -845,18 +858,6 @@ body {
     padding-left: 5px;
     padding-right: 5px;
   }
-  .sidebar-item {
-    max-width: 150px;
-  }
-  .sidebar-component {
-    max-width: 170px;
-  }
-  .sidebar-item .brand-list::after {
-    left: -4px;
-  }
-  .sidebar-item .brand-list.active::after {
-    left: -4px;
-  }
   .container-checkbox {
     padding-left: 27px;
   }
@@ -866,16 +867,6 @@ body {
 }
 
 @media (max-width: 440px) {
-  .sidebar-item .brand-list::after {
-    font-size: 13px;
-  }
-  .sidebar-item .brand-list.active::after {
-    font-size: 13px;
-  }
-  .sidebar-component {
-    max-width: 105px;
-    min-width: 105px;
-  }
   .toolbar-component {
     height: 48px;
   }
@@ -899,15 +890,6 @@ body {
   .container-checkbox {
     font-size: 14px;
   }
-  .sidebar-item .brand {
-    padding-left: 7px;
-    font-size: 14px;
-  }
-  .sidebar-item .brand-product {
-    font-size: 13px;
-    line-height: 16px;
-    padding-left: 7px;
-  }
   .container-email #result {
     font-size: 14px;
   }
@@ -921,10 +903,6 @@ body {
   }
   .container-email .changed::before {
     font-size: 14px;
-  }
-  .sidebar-item .brand-product ul li.active__li::after {
-    font-size: 12px;
-    left: 4px;
   }
   .checkmark {
     height: 17px;
@@ -976,11 +954,6 @@ body {
   .sidebar-item .brand-product ul li.active__li {
     font-weight: 600;
   }
-  .sidebar-item .brand-product ul li.active__li::after {
-    left: 2px;
-    font-size: 12px;
-    display: none;
-  }
   .btn__wrapper .menu-button .menu-button__strip {
     width: 23px;
     height: 3px;
@@ -988,9 +961,15 @@ body {
   .container-email .form__field {
     max-width: 170px;
   }
+  .overlay {
+    height: 125vh;
+  }
 }
 
 @media (max-width: 340px) {
+  .overlay {
+    height: 175vh;
+  }
   input[type="email"]::-webkit-input-placeholder {
     font-size: 14px;
   }
@@ -1008,21 +987,6 @@ body {
   }
   input[type="email"] {
     font-size: 12px;
-  }
-  .sidebar-item .brand-product {
-    font-size: 12px;
-    line-height: 16px;
-    padding-left: 5px;
-  }
-  .sidebar-item .brand-list::after {
-    font-size: 13px;
-  }
-  .sidebar-item .brand-list.active::after {
-    font-size: 13px;
-  }
-  .sidebar-component {
-    max-width: 105px;
-    min-width: 105px;
   }
   .toolbar-component {
     height: 48px;
@@ -1048,10 +1012,6 @@ body {
   .container-checkbox {
     font-size: 14px;
   }
-  .sidebar-item .brand {
-    padding-left: 3px;
-    font-size: 13px;
-  }
   .container-email #result {
     font-size: 14px;
   }
@@ -1065,14 +1025,6 @@ body {
   }
   .container-email .changed::before {
     font-size: 14px;
-  }
-  .sidebar-item .brand-product ul li.active__li {
-    font-weight: 600;
-  }
-  .sidebar-item .brand-product ul li.active__li::after {
-    left: 2px;
-    font-size: 12px;
-    display: none;
   }
   .checkmark {
     height: 17px;
