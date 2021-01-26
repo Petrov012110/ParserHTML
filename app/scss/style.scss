@@ -18,7 +18,6 @@
     z-index: 100;
     padding: 0 15px;
     box-shadow: 0 1px 0 rgba(12,13,14,0.15);
-    position: fixed;
 }
 .toolbar-section__left{
     display: flex;
@@ -83,11 +82,16 @@
 //затемнение
 .overlay {
     background-color: rgba(0,0,0,0.7); 
-    height: 105vh;
+    height: 150%;
     position: absolute;
     width: 100%;
     z-index: 5;
 }
+.overlay-body{
+    position: fixed;
+    width: 100%;
+}
+
 .sidebar-component{
     max-width: 320px;
     padding-left: 5px;
@@ -112,6 +116,9 @@
     margin-top: 5px;
     max-width: 280px;
     width: 100%;
+    &:last-child{
+        margin-bottom: 180px;
+    }
     .brand-list{
         &::after{
             font-family: 'icomoon';
@@ -197,10 +204,15 @@
         }
     }
 }
+.content{
+    display: flex;
+    width: 100%;
+}
 .content-component{
     width: 100%;
     padding-left: 100px;
     padding-top: 25px;
+    padding-right: 50px;
 }
 
 .container-checkbox{
@@ -278,7 +290,7 @@
     border-radius: 50%;
   }
 .content-box__filter{
-    column-count: 4;
+    column-count: 3;
 }
 .wrapper-label{
     display: flex;
@@ -286,9 +298,6 @@
         padding-bottom: 2px;
         margin-left: 10px;
         line-height: 0;
-        img{
-
-        }
     }
 }
 
@@ -298,6 +307,9 @@
     form{
         display: block;
     }
+    .btn-wrapp{
+        display: flex;
+    }
     .btn{
         border: none;
         background-color: #fc5454;
@@ -305,10 +317,8 @@
         color: #fff;
         border-radius: 0.25rem;
         padding: 8px 9px;
-        position: absolute;
         font-size: 18px;
         outline: none;
-        margin-bottom: 20px;
         &::after{
             font-family: 'icomoon';
             position: relative;
@@ -378,8 +388,7 @@
     border-radius: 50%;
     width: 39px;
     height: 39px;
-    position: relative;
-    left: 100px;
+    margin-left: 10px;
     animation: spin 2s linear infinite;
   }
   
@@ -387,6 +396,43 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+
+.adv-slider{
+    max-width: 250px;
+    width: 100%;
+    background-color: transparent;
+}
+.slider{
+    padding: 10px 20px;
+    .slider-inner{
+        outline: none;
+    }
+}
+.link-advertise{
+    outline: none;
+    img{
+        max-width: 180px;
+        max-height: 180px;
+        min-width: 100px;
+        min-height: 100px;
+        object-fit: contain;        
+    }
+    .content-wrapp{
+        display: flex;
+        justify-content: space-between;
+        width: 170px;
+        &__title{
+            margin-right: 10px
+        }
+        &__price{
+            font-weight: 600
+        }
+    }
+    .description-wrapp{
+        font-size: 13px;
+    }
+}
 
 @import 'media'; 
 

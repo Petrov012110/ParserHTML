@@ -307,7 +307,6 @@ body {
   padding: 0 15px;
   -webkit-box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
           box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15);
-  position: fixed;
 }
 
 .toolbar-section__left {
@@ -395,10 +394,15 @@ body {
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 105vh;
+  height: 150%;
   position: absolute;
   width: 100%;
   z-index: 5;
+}
+
+.overlay-body {
+  position: fixed;
+  width: 100%;
 }
 
 .sidebar-component {
@@ -434,6 +438,10 @@ body {
   margin-top: 5px;
   max-width: 280px;
   width: 100%;
+}
+
+.sidebar-item:last-child {
+  margin-bottom: 180px;
 }
 
 .sidebar-item .brand-list::after {
@@ -547,10 +555,18 @@ body {
   left: 18px;
 }
 
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
 .content-component {
   width: 100%;
   padding-left: 100px;
   padding-top: 25px;
+  padding-right: 50px;
 }
 
 .container-checkbox {
@@ -634,9 +650,9 @@ body {
 }
 
 .content-box__filter {
-  -webkit-column-count: 4;
-     -moz-column-count: 4;
-          column-count: 4;
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
 }
 
 .wrapper-label {
@@ -655,6 +671,12 @@ body {
   display: block;
 }
 
+.container-email .btn-wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .container-email .btn {
   border: none;
   background-color: #fc5454;
@@ -662,10 +684,8 @@ body {
   color: #fff;
   border-radius: 0.25rem;
   padding: 8px 9px;
-  position: absolute;
   font-size: 18px;
   outline: none;
-  margin-bottom: 20px;
 }
 
 .container-email .btn::after {
@@ -746,8 +766,7 @@ body {
   border-radius: 50%;
   width: 39px;
   height: 39px;
-  position: relative;
-  left: 100px;
+  margin-left: 10px;
   -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
 }
@@ -774,15 +793,82 @@ body {
   }
 }
 
-@media (max-width: 1150px) {
+.adv-slider {
+  max-width: 250px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.slider {
+  padding: 10px 20px;
+}
+
+.slider .slider-inner {
+  outline: none;
+}
+
+.link-advertise {
+  outline: none;
+}
+
+.link-advertise img {
+  max-width: 180px;
+  max-height: 180px;
+  min-width: 100px;
+  min-height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.link-advertise .content-wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 170px;
+}
+
+.link-advertise .content-wrapp__title {
+  margin-right: 10px;
+}
+
+.link-advertise .content-wrapp__price {
+  font-weight: 600;
+}
+
+.link-advertise .description-wrapp {
+  font-size: 13px;
+}
+
+@media (max-width: 1395px) {
   .content-box__filter {
     -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
   }
+  .content-component {
+    padding-left: 38px;
+    padding-right: 7px;
+  }
+}
+
+@media (max-width: 1165px) {
+  .content-box__filter {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
   .content-box {
     top: 53px;
     left: 80px;
+  }
+}
+
+@media (max-width: 950px) {
+  .content {
+    display: block;
   }
 }
 
@@ -797,6 +883,9 @@ body {
 }
 
 @media (max-width: 740px) {
+  .toolbar-component {
+    position: fixed;
+  }
   .btn__wrapper {
     position: relative;
   }
@@ -824,9 +913,13 @@ body {
   .content-box {
     top: 16px;
     left: 182px;
+    padding-top: 45px;
   }
   .sidebar-component {
     display: none;
+  }
+  .sidebar-component.active {
+    top: 57px;
   }
   .content-component__wrapper {
     padding-left: 45px;
@@ -849,11 +942,6 @@ body {
 }
 
 @media (max-width: 660px) {
-  .content-box__filter {
-    -webkit-column-count: 1;
-       -moz-column-count: 1;
-            column-count: 1;
-  }
   .content-component__wrapper {
     padding-left: 5px;
     padding-right: 5px;
@@ -867,6 +955,9 @@ body {
 }
 
 @media (max-width: 440px) {
+  .sidebar-component.active {
+    top: 46px;
+  }
   .toolbar-component {
     height: 48px;
   }
@@ -949,10 +1040,7 @@ body {
     font-size: 12px;
   }
   .sidebar-component {
-    padding-left: 1px;
-  }
-  .sidebar-item .brand-product ul li.active__li {
-    font-weight: 600;
+    padding-left: 5px;
   }
   .btn__wrapper .menu-button .menu-button__strip {
     width: 23px;

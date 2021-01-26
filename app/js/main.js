@@ -10,13 +10,15 @@ $(function(){
     $('.menu-button').on('click', function(){
         // $('.sidebar-component').toggleClass('active');
         // e.preventDefault();
+        $('body').toggleClass('overlay-body');
         $(".sidebar-component").toggleClass("active");
         if ($(".sidebar-component").hasClass('active')) {
-          $('<div class="overlay">&nbsp;</div>').prependTo($('.container-component'));
+          $('<div class="overlay">&nbsp;</div>').prependTo($('body'));
       } else {
           $('.overlay').remove();
       }
     });
+    
 
 
 
@@ -71,6 +73,17 @@ $(function(){
       }      
       
       $("#email").on("input", validate);
+
+      $('.slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 7000,
+      });
 });
 
 

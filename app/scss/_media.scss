@@ -1,6 +1,15 @@
-@media (max-width: 1150px) {
+@media (max-width: 1395px) {
     .content-box__filter{
         column-count: 2;
+    }
+    .content-component {
+        padding-left: 38px;
+        padding-right: 7px;
+    }
+}
+@media (max-width: 1165px) {
+    .content-box__filter{
+        column-count: 1;
     }
     .content-box {
         top: 53px;
@@ -8,7 +17,11 @@
     }
 }
 
-
+@media (max-width: 950px) {
+    .content {
+        display: block;
+    }
+}
 @media (max-width: 800px) {
     .content-box {
         top: 16px;
@@ -21,6 +34,9 @@
 
 
 @media (max-width: 740px){
+    .toolbar-component{
+        position: fixed;
+    }
     .btn__wrapper{
         position: relative;
         .menu-button{
@@ -48,9 +64,13 @@
     .content-box {
         top: 16px;
         left: 182px;
+        padding-top: 45px;
     }
     .sidebar-component{
         display: none;
+        &.active{
+            top:57px;
+        }
     }
     .content-component__wrapper{
         padding-left: 45px;
@@ -75,9 +95,6 @@
 
 
 @media (max-width: 660px) {
-    .content-box__filter {
-        column-count: 1;
-    }
     .content-component__wrapper{
         padding-left: 5px;
         padding-right: 5px;
@@ -114,6 +131,11 @@
     //     max-width: 105px;
     //     min-width: 105px; 
     // }
+    .sidebar-component{
+        &.active{
+            top:46px;
+        }
+    }
     .toolbar-component {
         height: 48px;
     }
@@ -205,10 +227,7 @@
         font-size: 12px;
     }
     .sidebar-component {
-        padding-left: 1px;
-    }
-    .sidebar-item .brand-product ul li.active__li{
-        font-weight: 600;
+        padding-left: 5px;
     }
     // .sidebar-item .brand-product ul li.active__li::after {
     //     left: 2px;

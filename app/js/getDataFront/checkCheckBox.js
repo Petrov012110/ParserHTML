@@ -10,7 +10,7 @@ const checkCheckBox = (arr) => {
     }
 
     function getCheckbox() {
-        let checks = document.querySelectorAll('.content-box__filter>label>input:checked');
+        let checks = document.querySelectorAll('.content-box__filter>.wrapper-label>label>input:checked');
         let newArr = [];
         
         for (let el of checks) {
