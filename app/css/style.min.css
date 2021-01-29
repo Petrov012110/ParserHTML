@@ -13,7 +13,8 @@ html {
 html,
 body {
   height: 100%;
-  font-family: courier, courier new, serif;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
 }
 
 a {
@@ -326,7 +327,7 @@ body {
 }
 
 .menu-button .menu-button__strip {
-  background-color: aqua;
+  background-color: #54c7ec;
   padding-top: 3px;
 }
 
@@ -342,8 +343,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 700;
-  color: #434854;
+  color: #000;
   letter-spacing: 3px;
+  margin-left: 15px;
 }
 
 .toolbar-logo a img {
@@ -359,6 +361,12 @@ body {
 }
 
 .toolbar-logo a .logo {
+  font-size: 20px;
+}
+
+.toolbar-logo a .logo span {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 400;
   font-size: 24px;
 }
 
@@ -405,16 +413,13 @@ body {
 }
 
 .sidebar-component {
-  max-width: 320px;
+  max-width: 230px;
   padding-left: 5px;
   width: 100%;
   margin-top: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -435,7 +440,7 @@ body {
 
 .sidebar-item {
   margin-top: 5px;
-  max-width: 280px;
+  max-width: 190px;
   width: 100%;
 }
 
@@ -447,16 +452,16 @@ body {
   font-family: 'icomoon';
   content: "\f054";
   position: relative;
-  font-size: 16px;
-  color: #2ca2fd;
-  left: 95px;
+  font-size: 11px;
+  color: #000;
+  left: 7px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .sidebar-item .brand-list.active {
-  background-color: #f4fbfb;
+  background-color: #f2f2f2;
   color: #434854;
 }
 
@@ -464,23 +469,29 @@ body {
   font-family: 'icomoon';
   content: "\f078";
   position: relative;
-  font-size: 16px;
-  color: #2ca2fd;
-  left: 95px;
+  font-size: 11px;
+  color: #000;
+  left: 7px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .sidebar-item .brand-list.active:hover {
-  background-color: #f4fbfb;
+  background-color: #f2f2f2;
+  color: #434854;
+}
+
+.sidebar-item .brand-list.active:hover::after {
+  color: #434854;
 }
 
 .sidebar-item .brand {
   padding-left: 5px;
-  height: 42px;
+  height: 32px;
   width: 100%;
-  font-family: courier, courier new, serif;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   cursor: pointer;
@@ -490,7 +501,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: .25rem;
+  border-radius: .15rem;
+  padding: 9px;
 }
 
 .sidebar-item .brand:hover {
@@ -508,7 +520,8 @@ body {
 
 .sidebar-item .brand-product {
   display: none;
-  font-family: courier, courier new, serif;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   padding-left: 20px;
@@ -519,16 +532,15 @@ body {
 }
 
 .sidebar-item .brand-product ul li {
-  border-radius: .25rem;
-  height: 42px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 5px;
-  margin-top: 3px;
+  padding: 9px;
+  margin-top: 4px;
   cursor: pointer;
 }
 
@@ -537,20 +549,20 @@ body {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  color: #000;
+  color: #434854;
 }
 
 .sidebar-item .brand-product ul li.active__li {
-  background-color: #f4fbfb;
-  color: #000;
+  background-color: #f2f2f2;
+  color: #994cc3;
 }
 
 .sidebar-item .brand-product ul li.active__li::after {
   position: relative;
   font-family: 'icomoon';
   content: "\f00c";
-  font-size: 16px;
-  color: #42c28c;
+  font-size: 11px;
+  color: #434854;
   left: 18px;
 }
 
@@ -596,12 +608,12 @@ body {
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 21px;
-  width: 21px;
+  top: 5px;
+  left: 5px;
+  height: 15px;
+  width: 15px;
   background-color: #eee;
-  border-radius: 0.25rem;
+  border-radius: 0.15rem;
 }
 
 /* On mouse-over, add a grey background color */
@@ -611,7 +623,7 @@ body {
 
 /* When the checkbox is checked, add a blue background */
 .container-checkbox input:checked ~ .checkmark {
-  background-color: #2ca2fd;
+  background-color: #54c7ec;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -628,8 +640,8 @@ body {
 
 /* Style the checkmark/indicator */
 .container-checkbox .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 5px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -678,38 +690,34 @@ body {
 
 .container-email .btn {
   border: none;
-  background-color: #fc5454;
+  background-color: #ff0000;
   cursor: pointer;
   color: #fff;
-  border-radius: 0.25rem;
-  padding: 8px 9px;
-  font-size: 18px;
+  border-radius: 0.15rem;
+  padding: 5px 7px;
+  font-size: 16px;
   outline: none;
 }
 
 .container-email .btn::after {
   font-family: 'icomoon';
   position: relative;
-  content: "\f003";
-  font-size: 18px;
+  content: "\f1c3";
+  font-size: 16px;
   padding-left: 5px;
-}
-
-.container-email .btn[disabled] {
-  background-color: #d1cfcf;
-  cursor: not-allowed;
 }
 
 .container-email .form__field {
   padding: 8px 9px;
   outline: none;
-  border-radius: 4px;
-  border: 1px #a0ccee solid;
+  border-radius: none;
+  border: 1px #8c8e91 solid;
   margin-right: 20px;
 }
 
 .container-email input[type=email]:focus {
-  border: 1px #2ca2fd solid;
+  border: 1px #000 solid;
+  border-radius: none;
 }
 
 .container-email #result {
@@ -827,6 +835,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 170px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
 }
 
 .link-advertise .content-wrapp__title {
@@ -834,6 +846,9 @@ body {
 }
 
 .link-advertise .content-wrapp__price {
+  background-color: #fffae0;
+  border-radius: 0.15rem;
+  padding: 2px;
   font-weight: 600;
 }
 
@@ -898,7 +913,6 @@ body {
   .btn__wrapper .menu-button .menu-button__strip {
     width: 27px;
     height: 4px;
-    background-color: aqua;
     margin-top: 5px;
   }
   .btn__wrapper .menu-button .menu-button__strip:first-child {
@@ -995,15 +1009,15 @@ body {
     font-size: 14px;
   }
   .checkmark {
-    height: 17px;
-    width: 17px;
+    height: 15px;
+    width: 15px;
   }
   .container-checkbox {
     padding-left: 27px;
   }
   .container-checkbox .checkmark:after {
-    left: 6px;
-    top: 3px;
+    left: 5px;
+    top: 2px;
   }
   #loader.active {
     border: 4px solid #00f0ff;

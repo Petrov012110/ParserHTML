@@ -2,10 +2,10 @@ const checkCheckBox = (arr) => {
     let dataCheckBox = getCheckbox();
     if (dataCheckBox.length !== 0){
         arr.push({"groups": dataCheckBox});
-        document.querySelector('#resultCheckBox').classList.remove('active');
+        // document.querySelector('#resultCheckBox').classList.remove('active');
     }
     else{
-        document.querySelector('#resultCheckBox').classList.add('active');
+        // document.querySelector('#resultCheckBox').classList.add('active');
         return null
     }
 

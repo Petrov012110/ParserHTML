@@ -48,7 +48,6 @@
             .menu-button__strip{
                 width: 27px;
                 height: 4px;
-                background-color: aqua;
                 margin-top: 5px;
                 &:first-child{
                     margin-top: 0px;
@@ -196,15 +195,15 @@
     //     left: 4px;
     // }
     .checkmark {
-        height: 17px;
-        width: 17px;
+        height: 15px;
+        width: 15px;
     }
     .container-checkbox {
         padding-left: 27px;
     }
     .container-checkbox .checkmark:after {
-        left: 6px;
-        top: 3px;
+        left: 5px;
+        top: 2px;
     }
     #loader.active {
         border: 4px solid  $neon; /* Light grey */

@@ -1,7 +1,7 @@
 (async () => {
 
     let {checkCheckBox} = await import("./getDataFront/checkCheckBox.js");
-    let {checkEmail} = await import("./getDataFront/checkEmail.js");
+    // let {checkEmail} = await import("./getDataFront/checkEmail.js");
     let {checkKeyWords} = await import("./getDataFront/checkKeyWords.js");
     let {sendData} = await import("./sendData.js");
     
@@ -11,31 +11,25 @@
         let arrFrontData = [];
         if(
             checkCheckBox(arrFrontData) !== null && 
-            checkKeyWords(arrFrontData) !== null && 
-            checkEmail(arrFrontData) !== null
+            checkKeyWords(arrFrontData) !== null 
             )
             {
                 console.log(JSON.stringify(arrFrontData));
 
                 sendData(arrFrontData);
                 
-                document.querySelector('.btn').innerHTML = 'Wait..';
-                document.querySelector('.loader').classList.toggle('active');
+                // document.querySelector('.btn').innerHTML = 'Wait..';
+                // document.querySelector('.loader').classList.toggle('active');
                 document.querySelector('.btn').setAttribute('disabled', 'true');
 
                 setTimeout(() => {
-                    document.querySelector('.btn').innerHTML = 'Send';
-                    document.querySelector('.loader').classList.toggle('active');
+                    // document.querySelector('.btn').innerHTML = 'Send';
+                    // document.querySelector('.loader').classList.toggle('active');
                     document.querySelector('.btn').removeAttribute('disabled');
-                }, 25000);
+                }, 10000);
             }
     }
 
-    
-
-    // function cleanArr(arrFrontData) {
-    //     arrFrontData.splice(0,arrFrontData.length)
-    // }
     
 
 

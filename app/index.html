@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -25,9 +23,9 @@
             </div>
             <div class="toolbar-logo">
                 <a href="#">
-                    <img class="img_logo" src="images/doc-not-2.svg" alt="" width="40px" height="40px">
+                    <!-- <img class="img_logo" src="images/doc-not-2.svg" alt="" width="40px" height="40px"> -->
                     <div class="logo">
-                        get<span>.</span><span>offers</span>
+                        <span>get.</span>offers
                     </div>
                 </a>
             </div>
@@ -48,17 +46,20 @@
                         </div>
                         <div class="brand-product">
                             <ul>
-                                <li class="brand-product__li" id="Adidas">Adidas</li>
-                                <li class="brand-product__li" id="Yeezy">Yeezy</li>
-                                <li class="brand-product__li" id="Yeezy_700">Yeezy 700</li>
-                                <li class="brand-product__li" id="Yeezy_500">Yeezy 500</li>
-                                <li class="brand-product__li" id="Yeezy_350">Yeezy 350</li>
-                                <li class="brand-product__li" id="Yeezy_250">Yeezy 250</li>
-                                <li class="brand-product__li" id="Y-3">Y-3</li>
-                                <li class="brand-product__li" id="NMD">NMD</li>
-                                <li class="brand-product__li" id="Raf_Simons">Raf Simons</li>
-                                <li class="brand-product__li" id="Originals">Originals</li>
-                                <li class="brand-product__li" id="Stan_Smith">Stan Smith</li>
+                                <li class="brand-product__li" id="Adidas">
+                                    <span>Adidas</span>
+                                    
+                                </li>
+                                <li class="brand-product__li" id="Yeezy"> <span>Yeezy</span> </li>
+                                <li class="brand-product__li" id="Yeezy_700"> <span>Yeezy 700</span> </li>
+                                <li class="brand-product__li" id="Yeezy_500"> <span>Yeezy 500</span> </li>
+                                <li class="brand-product__li" id="Yeezy_350"> <span>Yeezy 350</span> </li>
+                                <li class="brand-product__li" id="Yeezy_250"> <span>Yeezy 250</span> </li>
+                                <li class="brand-product__li" id="Y-3"> <span>Y-3</span> </li>
+                                <li class="brand-product__li" id="NMD"> <span>NMD</span> </li>
+                                <li class="brand-product__li" id="Raf_Simons"> <span>Raf Simons</span> </li>
+                                <li class="brand-product__li" id="Originals"> <span>Originals</span> </li>
+                                <li class="brand-product__li" id="Stan_Smith"> <span>Stan Smith</span> </li>
                             </ul>
                         </div>                
                 </div>
@@ -260,18 +261,18 @@
                         </div>                          
                     </div>
                     <div class="container-email">
-                        <div class="description">
+                        <!-- <div class="description">
                             <p>Укажите почту для получения документа</p>
-                        </div>
+                        </div> -->
                         <div class="container__item">
                             <form class="form">
-                                <input id="email" type="email" class="form__field" placeholder="Your E-Mail Address" />
+                                <!-- <input id="email" type="email" class="form__field" placeholder="Your E-Mail Address" /> -->
                                 <div id='result' ></div>
                                 <div id='resultKeyWords' >Выберите бренд или модель</div>
                                 <div id='resultCheckBox' >Выберите группу</div>
                                 <div class="btn-wrapp">
-                                    <button type="button" id='validate' class="btn" disabled >Send</button>
-                                    <div id="loader" class="loader"></div>
+                                    <button type="button" id='validate' class="btn"  >Download</button>
+                                    <!-- <div id="loader" class="loader"></div> -->
                                 </div>
                             </form>
                         </div>
@@ -373,17 +374,18 @@
                 </div>
                     
             </div>
+
     </div>
 
     
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/getData.js"></script>
-    <!-- <script src="js/getAllParametrs.js"></script> -->
-    <!-- <script src="js/validation.js"></script> -->
+    <script src="js/liveSearch/autocomplete.js"></script>
 </body>
 
 </html>

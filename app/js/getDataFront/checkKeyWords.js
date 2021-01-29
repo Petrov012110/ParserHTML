@@ -3,10 +3,10 @@ const checkKeyWords = (arr) => {
         let dataKeyWords = getKeyWords();
         if (dataKeyWords.length) {
             arr.push({"keyWords": dataKeyWords});
-            document.querySelector('#resultKeyWords').classList.remove('active');
+            // document.querySelector('#resultKeyWords').classList.remove('active');
         }
         else{
-            document.querySelector('#resultKeyWords').classList.add('active');
+            // document.querySelector('#resultKeyWords').classList.add('active');
             return null
         }
 
