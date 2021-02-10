@@ -29,6 +29,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "xlsx": "^0.16.9"
   }
 }

@@ -56,7 +56,8 @@
     .logo{
         font-size: 20px;
         span{
-            @include shadow;
+            // @include shadow;
+            font-family: 'Cutive Mono', monospace;
             font-size: 24px;
         }
     }
